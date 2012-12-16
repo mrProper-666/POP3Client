@@ -49,7 +49,7 @@ void Pop::readData(){
             emit mailFinished(&s_mail);
             return;
         }
-    } else if (array.contains("-")) {
+    } else if (array.contains("-Err")) {
         emit error(array);
     }
 }
