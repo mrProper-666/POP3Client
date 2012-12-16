@@ -6,6 +6,7 @@
 #include <QString>
 #include <QtDebug>
 #include <QRegExp>
+#include <QTextCodec>
 
 #include "structs.h"
 
@@ -42,6 +43,7 @@ private:
     void getTops(int count);
     QString getFrom(QString str);
     QString getSubject(QString str);
+    QString fromBase64(QString string, QString encoding);
     
 signals:
     void mailFinished(mail*);
