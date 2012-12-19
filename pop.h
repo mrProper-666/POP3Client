@@ -46,13 +46,13 @@ private:
     QString fromBase64(QString string, QString encoding);
     
 signals:
-    void mailFinished(mail*);
+    void mailFinished(mail);
     void error(QString str);
+    void mailCount(int);
     
 public slots:
 
 private slots:
-    void readData();
     
 };
 

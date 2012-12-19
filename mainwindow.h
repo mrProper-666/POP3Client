@@ -4,9 +4,12 @@
 #include <QMainWindow>
 #include <QtGui/QMessageBox>
 #include <QApplication>
+#include <QListWidget>
+#include <QPlainTextEdit>
 
 #include "pop.h"
 #include "structs.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -22,12 +25,15 @@ public:
     
 private slots:
     void on_connectBtn_clicked();
-    void mailFill(mail *s_mail);
+    void mailFill(mail s_mail);
     void errorHandler(QString str);
+    void on_mailList_activated(const QModelIndex &index);
+    void updateTitle(int i);
 
 private:
     Ui::MainWindow *ui;
     Pop * CPop;
+    QList<QByteArray> model;
 };
 
 #endif // MAINWINDOW_H

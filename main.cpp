@@ -11,6 +11,9 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForCStrings(codec);
     QTextCodec::setCodecForLocale(codec);
     QTextCodec::setCodecForTr(codec);
+
+    a.setApplicationName(QObject::tr("Pop3 клиент"));
+
     MainWindow w;
     w.show();
     
